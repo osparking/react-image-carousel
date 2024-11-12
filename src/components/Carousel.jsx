@@ -2,6 +2,11 @@ import React from "react";
 import "./Carousel.css";
 
 export const Carousel = ({ data }) => {
-  console.log(data);
-  return <div>Carousel</div>;
+  return (
+    <div>
+      {data.map((item, idx) => {
+        return <img src={item.src} alt={item.alt} key={idx} />;
+      })}
+    </div>
+  );
 };
