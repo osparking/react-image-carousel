@@ -5,16 +5,18 @@ import "./Carousel.css";
 export const Carousel = ({ data }) => {
   return (
     <div className="carousel">
-      <BsArrowLeftCircleFill />
+      <BsArrowLeftCircleFill className="arrow arrow-left" />
       {data.map((item, idx) => {
         return (
           <img src={item.src} alt={item.alt} key={idx} className="slide" />
         );
       })}
-      <BsArrowRightCircleFill />
-      <span>
+      <BsArrowRightCircleFill className="arrow arrow-right" />
+      <span className="indicators">
         {data.map((_, idx) => {
-          return <button key={idx} onClick={null}></button>;
+          return (
+            <button key={idx} onClick={null} className="indicator"></button>
+          );
         })}
       </span>
     </div>
