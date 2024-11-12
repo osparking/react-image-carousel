@@ -12,6 +12,11 @@ export const Carousel = ({ data }) => {
         );
       })}
       <BsArrowRightCircleFill />
+      <span>
+        {data.map((_, idx) => {
+          return <button key={idx} onClick={null}></button>;
+        })}
+      </span>
     </div>
   );
 };
