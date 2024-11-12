@@ -20,3 +20,11 @@
   height: 2rem;
   color: white;
 }
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
