@@ -33,3 +33,21 @@
 .arrow-right {
   right: 1rem;
 }
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: white;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px #555;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
