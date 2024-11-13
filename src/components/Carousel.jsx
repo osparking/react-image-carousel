@@ -9,9 +9,13 @@ export const Carousel = ({ data }) => {
     setSlide((slide + 1) % data.length);
   };
 
+  const prevSlide = () => {
+    setSlide((slide - 1 + data.length) % data.length);
+  };
+
   return (
     <div className="carousel">
-      <BsArrowLeftCircleFill className="arrow arrow-left" />
+      <BsArrowLeftCircleFill className="arrow arrow-left" onClick={prevSlide} />
       {data.map((item, idx) => {
         return (
           <img
