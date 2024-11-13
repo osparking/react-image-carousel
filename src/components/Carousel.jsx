@@ -4,6 +4,11 @@ import "./Carousel.css";
 
 export const Carousel = ({ data }) => {
   const [slide, setSlide] = useState(0);
+
+  const nextSlide = () => {
+    setSlide((slide + 1) % data.length);
+  };
+
   return (
     <div className="carousel">
       <BsArrowLeftCircleFill className="arrow arrow-left" />
@@ -17,7 +22,10 @@ export const Carousel = ({ data }) => {
           />
         );
       })}
-      <BsArrowRightCircleFill className="arrow arrow-right" />
+      <BsArrowRightCircleFill
+        className="arrow arrow-right"
+        onClick={nextSlide}
+      />
       <span className="indicators">
         {data.map((_, idx) => {
           return (
