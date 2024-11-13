@@ -35,7 +35,7 @@ export const Carousel = ({ data }) => {
           return (
             <button
               key={idx}
-              onClick={null}
+              onClick={() => setSlide(idx)}
               className={
                 slide === idx ? "indicator" : "indicator indicator-inactive"
               }
