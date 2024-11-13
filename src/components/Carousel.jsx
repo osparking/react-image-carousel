@@ -21,7 +21,13 @@ export const Carousel = ({ data }) => {
       <span className="indicators">
         {data.map((_, idx) => {
           return (
-            <button key={idx} onClick={null} className="indicator"></button>
+            <button
+              key={idx}
+              onClick={null}
+              className={
+                slide === idx ? "indicator" : "indicator indicator-inactive"
+              }
+            ></button>
           );
         })}
       </span>
