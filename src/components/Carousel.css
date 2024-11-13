@@ -19,6 +19,11 @@
   width: 2rem;
   height: 2rem;
   color: white;
+  filter: drop-shadow(0 0 5px #555);
+}
+
+.arrow:hover {
+  cursor: pointer;
 }
 
 .arrow-left {
